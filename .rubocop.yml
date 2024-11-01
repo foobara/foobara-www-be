@@ -5,6 +5,8 @@ AllCops:
 inherit_gem:
   foobara-rubocop-rules:
     - rules/*
+  # do we want this?
+  rubocop-rails-omakase: rubocop.yml
 
 Naming/FileName:
   inherit_mode:

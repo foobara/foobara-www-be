@@ -5,7 +5,20 @@
 /doc/
 /pkg/
 /spec/reports/
-/tmp/
+
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+/tmp/pids/*
+!/tmp/pids/
+!/tmp/pids/.keep
+/storage/*
+!/storage/.keep
+/tmp/storage/*
+!/tmp/storage/
+!/tmp/storage/.keep
+/config/master.key
 
 /.rspec_status
 /.byebug_history

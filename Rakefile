@@ -12,3 +12,7 @@ task default: %i[spec rubocop]
 task :environment do
   require_relative "boot"
 end
+
+require_relative "config/application"
+
+Rails.application.load_tasks
