@@ -2,14 +2,13 @@ module Foobara
   module RubyDocumentation
     class FoobaraProject < Foobara::Entity
       attributes do
-        id :integer
         gem_name :string
-        english_name :string
+        homepage :string
         description :string
         versions [:string]
       end
 
-      primary_key :id
+      primary_key :gem_name
     end
   end
 end

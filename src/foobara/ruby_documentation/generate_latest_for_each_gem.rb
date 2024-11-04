@@ -1,34 +1,39 @@
 module Foobara
   module RubyDocumentation
     class GenerateLatestForEachGem < Foobara::Command
-      # class SomeError < RuntimeError
-      #   class << self
-      #     def context_type_declaration
-      #       { foo: :string }
-      #     end
-      #   end
-      # end
-
-      # possible_error SomeError
-
-      inputs do
-        foo :string, default: "bar"
-      end
-
       result :string
 
-      # depends_on SomeOtherCommand
+      depends_on_entity Foobara::RubyDocumentation::FoobaraProject
 
       def execute
-        do_something
+        load_projects
+
+        each_project do
+          generate_yard_documentation
+        end
+
+        stitch_into_one_page
+
+        "todo: figure out what to return"
       end
 
-      # def validate
-      #   add_runtime_error SomeError.new(message: "kaboom", context: {foo: :bar})
-      # end
+      attr_accessor :projects, :project
 
-      def do_something
-        foo
+      def load_projects
+        self.projects = Foobara::RubyDocumentation::FoobaraProject.all
+      end
+
+      def each_project
+        projects.each do |project|
+          self.project = project
+          yield
+        end
+      end
+
+      def generate_documentation
+      end
+
+      def stitch_into_one_page
       end
     end
   end

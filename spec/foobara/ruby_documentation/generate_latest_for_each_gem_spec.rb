@@ -1,16 +1,12 @@
 RSpec.describe Foobara::RubyDocumentation::GenerateLatestForEachGem do
-  let(:command) { described_class.new(inputs) }
+  let(:command) { described_class.new }
   let(:outcome) { command.run }
   let(:result) { outcome.result }
   let(:errors) { outcome.errors }
   let(:errors_hash) { outcome.errors_hash }
 
-  let(:inputs) do
-    { foo: "bar" }
-  end
-
   it "is successful" do
     expect(outcome).to be_success
-    expect(result).to eq("bar")
+    expect(result).to be_a(String)
   end
 end
