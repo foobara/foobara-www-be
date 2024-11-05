@@ -60,7 +60,7 @@ module Foobara
       end
 
       def installed_path
-        @installed_path ||= Bundler.with_unbundled_env do
+        Bundler.with_unbundled_env do
           gem_name = project.gem_name
           gem_version = project.versions.first
 
@@ -82,10 +82,7 @@ module Foobara
               regex = if has_multiple_versions
                         /\n\s+Installed at (\(.*)\n\n/m
                       else
-                        # TODO: tricky to test this but should be testable with some refactoring
-                        # :nocov:
                         /^\s+Installed at: ([^\n]+)$/
-                        # :nocov:
                       end
 
               if info_text =~ regex
@@ -100,9 +97,7 @@ module Foobara
                                             # :nocov:
                                           end
                                         else
-                                          # :nocov:
                                           ::Regexp.last_match(1)
-                                          # :nocov:
                                         end
                 File.join(installed_at_location, "gems", "#{gem_name}-#{gem_version}")
               else
@@ -131,36 +126,34 @@ module Foobara
               end
             end
 
-            projects.each do |project|
-              gem_name = project.gem_name
-              gem_version = project.versions.first
-              gem_output_dir = File.join(output_dir, gem_name, gem_version)
+            gem_name = project.gem_name
+            gem_version = project.versions.first
+            gem_output_dir = File.join(output_dir, gem_name, gem_version)
 
-              stats[gem_name] ||= {}
-              stat = stats[gem_name][gem_version] ||= {}
+            stats[gem_name] ||= {}
+            stat = stats[gem_name][gem_version] ||= {}
 
-              if Dir.exist?(gem_output_dir)
-                stat["status"] = "documentation already existed"
-                next
-              end
-
-              FileUtils.mkdir_p gem_output_dir
-
-              puts "generating docs for #{gem_name} #{gem_version}"
-
-              Open3.popen3(
-                "yard doc 'projects/**/*.rb' 'src/**/*.rb' 'lib/**/*.rb' -o #{gem_output_dir}"
-              ) do |_stdin, _stdout, stderr, wait_thr|
-                exit_status = wait_thr.value
-                unless exit_status.success?
-                  # :nocov:
-                  warn "WARNING: could not rubocop -A. #{stderr.read}"
-                  # :nocov:
-                end
-              end
-
-              stat["status"] = "generated docs"
+            if Dir.exist?(gem_output_dir)
+              stat["status"] = "documentation already existed"
+              next
             end
+
+            FileUtils.mkdir_p gem_output_dir
+
+            puts "generating docs for #{gem_name} #{gem_version}"
+
+            Open3.popen3(
+              "yard doc 'projects/**/*.rb' 'src/**/*.rb' 'lib/**/*.rb' -o #{gem_output_dir}"
+            ) do |_stdin, _stdout, stderr, wait_thr|
+              exit_status = wait_thr.value
+              unless exit_status.success?
+                # :nocov:
+                warn "WARNING: could not rubocop -A. #{stderr.read}"
+                # :nocov:
+              end
+            end
+
+            stat["status"] = "generated docs"
           end
         end
       end
