@@ -1,5 +1,6 @@
 require_relative "../ruby_gems_api/search"
 require_relative "../ruby_gems_api/get_owners"
+require_relative "../ruby_gems_api/get_versions"
 
 module Foobara
   module RubyDocumentation
@@ -7,7 +8,8 @@ module Foobara
       result [FoobaraProject]
 
       depends_on Foobara::RubyGemsApi::Search,
-                 Foobara::RubyGemsApi::GetOwners
+                 Foobara::RubyGemsApi::GetOwners,
+                 Foobara::RubyGemsApi::GetVersions
 
       def execute
         delete_all_projects
@@ -43,40 +45,16 @@ module Foobara
       def create_foobara_projects
         project_gems.each do |project_gem|
           project_name = project_gem.name
+          description = project_gem.info
+          homepage = project_gem.homepage_uri
+          versions = run_subcommand!(RubyGemsApi::GetVersions, gem_name: project_name)
 
-          puts "processing #{project_name}"
-          cmd = "gem info --remote --all -e #{project_name}"
-          Open3.popen3(cmd) do |_stdin, stdout, stderr, wait_thr|
-            exit_status = wait_thr.value
-            unless exit_status.success?
-              # :nocov:
-              raise "ERROR: could not #{cmd} #{stderr.read}"
-              # :nocov:
-            end
-
-            gem_info = stdout.read
-            regex = /^#{project_name} \(([\d\., ]+)\)\n.*\n    Homepage:\s+([.\w:\/-]+)\n.*\n\n(.*)\z/m
-
-            if gem_info =~ regex
-              version_string = ::Regexp.last_match(1)
-              homepage = ::Regexp.last_match(2)
-              description_string = ::Regexp.last_match(3)
-
-              versions = version_string.split(",").map(&:strip)
-              description = description_string.split("\n").map(&:strip).join("\n")
-
-              FoobaraProject.create(
-                gem_name: project_name,
-                description:,
-                versions:,
-                homepage:
-              )
-            else
-              # :nocov:
-              raise "ERROR: could not parse #{gem_info}"
-              # :nocov:
-            end
-          end
+          FoobaraProject.create(
+            gem_name: project_name,
+            description:,
+            versions: versions.map(&:number),
+            homepage:
+          )
         end
       end
     end
