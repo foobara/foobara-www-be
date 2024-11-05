@@ -17,6 +17,7 @@ module Foobara
         find_all_project_gems
         filter_by_owner
         create_foobara_projects
+        sort_projects
 
         projects
       end
@@ -56,6 +57,10 @@ module Foobara
             homepage:
           )
         end
+      end
+
+      def sort_projects
+        projects.sort_by!(&:gem_name)
       end
     end
   end

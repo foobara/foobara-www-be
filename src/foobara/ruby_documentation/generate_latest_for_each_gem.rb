@@ -8,7 +8,7 @@ module Foobara
         output_dir :string, default: "~/tmp/foobara_docs"
       end
 
-      result :string
+      result ::Hash
 
       depends_on LoadFoobaraProjectsFromRubyGemsDotOrg
       depends_on_entity Foobara::RubyDocumentation::FoobaraProject
@@ -23,7 +23,7 @@ module Foobara
 
         stitch_into_one_page
 
-        "todo: figure out what to return"
+        stats
       end
 
       attr_accessor :projects, :project
@@ -38,6 +38,10 @@ module Foobara
           self.project = project
           yield
         end
+      end
+
+      def stats
+        @stats ||= {}
       end
 
       def install_gem
@@ -70,11 +74,37 @@ module Foobara
 
             info_text = stdout.read
 
-            if info_text =~ /\n\s+Installed at (\(.*)\n\n/m
-              installed_at_locations = ::Regexp.last_match(1)
+            if info_text =~ /\A#{gem_name} \(([^)]+\))$/
+              installed_versions = ::Regexp.last_match(1)
 
-              if installed_at_locations =~ /^\s*\(#{project.versions.first}\): (.*)$/
-                File.join(::Regexp.last_match(1), "gems", "#{gem_name}-#{gem_version}")
+              has_multiple_versions = installed_versions.include?(",")
+
+              regex = if has_multiple_versions
+                        /\n\s+Installed at (\(.*)\n\n/m
+                      else
+                        # TODO: tricky to test this but should be testable with some refactoring
+                        # :nocov:
+                        /^\s+Installed at: ([^\n]+)$/
+                        # :nocov:
+                      end
+
+              if info_text =~ regex
+                installed_at_location = if has_multiple_versions
+                                          installed_at_locations = ::Regexp.last_match(1)
+
+                                          if installed_at_locations =~ /^\s*\(#{project.versions.first}\): (.*)$/
+                                            ::Regexp.last_match(1)
+                                          else
+                                            # :nocov:
+                                            raise "could not find installed path for #{project.gem_name}"
+                                            # :nocov:
+                                          end
+                                        else
+                                          # :nocov:
+                                          ::Regexp.last_match(1)
+                                          # :nocov:
+                                        end
+                File.join(installed_at_location, "gems", "#{gem_name}-#{gem_version}")
               else
                 # :nocov:
                 raise "could not find installed path for #{project.gem_name}"
@@ -82,7 +112,7 @@ module Foobara
               end
             else
               # :nocov:
-              raise "could not find installed path for #{project.gem_name}"
+              raise "Could not find installed version for #{project.gem_name}"
               # :nocov:
             end
           end
@@ -106,7 +136,13 @@ module Foobara
               gem_version = project.versions.first
               gem_output_dir = File.join(output_dir, gem_name, gem_version)
 
-              next if Dir.exist?(gem_output_dir)
+              stats[gem_name] ||= {}
+              stat = stats[gem_name][gem_version] ||= {}
+
+              if Dir.exist?(gem_output_dir)
+                stat["status"] = "documentation already existed"
+                next
+              end
 
               FileUtils.mkdir_p gem_output_dir
 
@@ -122,6 +158,8 @@ module Foobara
                   # :nocov:
                 end
               end
+
+              stat["status"] = "generated docs"
             end
           end
         end
