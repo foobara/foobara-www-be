@@ -28,11 +28,27 @@ RSpec.describe Foobara::RubyDocumentation::GenerateLatestForEachGem do
                  ])
   end
 
-  it "is successful", vcr: { record: :none } do
+  it "is successful",  vcr: { record: :none } do
     expect(outcome).to be_success
     expect(command).to have_received(:run_subcommand!).with(
       Foobara::RubyDocumentation::LoadFoobaraProjectsFromRubyGemsDotOrg
     )
-    expect(result).to be_a(String)
+    expect(result).to be_a(Hash)
+
+    command2 = described_class.new(inputs)
+
+    allow(command2).to receive(:run_subcommand!).with(
+      Foobara::RubyDocumentation::LoadFoobaraProjectsFromRubyGemsDotOrg
+    ).and_return([
+                   Foobara::RubyDocumentation::FoobaraProject.build(
+                     gem_name: "foobara-util",
+                     homepage: "Homepage One",
+                     description: "some gem",
+                     versions: ["0.0.6"]
+                   )
+                 ])
+    outcome2 = command2.run
+    expect(outcome2).to be_success
+    expect(outcome2.result).to be_a(Hash)
   end
 end
