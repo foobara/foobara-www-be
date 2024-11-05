@@ -43,7 +43,7 @@ module Foobara
       end
 
       def create_foobara_projects
-        project_gems.each do |project_gem|
+        self.projects = project_gems.map do |project_gem|
           project_name = project_gem.name
           description = project_gem.info
           homepage = project_gem.homepage_uri
