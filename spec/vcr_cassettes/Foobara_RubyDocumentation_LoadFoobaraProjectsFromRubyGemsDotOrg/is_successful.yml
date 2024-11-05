@@ -118,4 +118,2469 @@ http_interactions:
         Georgi"},{"documentation_uri":"https://www.rubydoc.info/gems/foobarac5/0.1.0","metadata":{},"homepage_uri":"http://foobar.com","funding_uri":null,"bug_tracker_uri":null,"project_uri":"https://rubygems.org/gems/foobarac5","version":"0.1.0","sha":"ba61ea67a1e55b7723e1f3dacf8dff3e607340c8fda9c1b6d3c4b2c1a53ad420","platform":"ruby","changelog_uri":null,"source_code_uri":null,"licenses":[],"gem_uri":"https://rubygems.org/gems/foobarac5-0.1.0.gem","downloads":3576,"mailing_list_uri":null,"name":"foobarac5","wiki_uri":null,"version_downloads":3576,"info":"this''s
         foobar","authors":"Wen-Tien Chang"}]'
   recorded_at: Tue, 05 Nov 2024 01:27:46 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-2b069ee7fe87271704215dd22f85bc1b';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A2219438858380338647
+      X-Request-Id:
+      - b7755d71-264e-484f-bbaa-33583eaf7e33
+      X-Runtime:
+      - '0.008240'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 35.163.143.14:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '360'
+      Date:
+      - Tue, 05 Nov 2024 02:11:42 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770034-PAO
+      X-Cache:
+      - HIT
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772703.784717,VS0,VE1
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:42 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-util/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-c38873920629f25f98face8a6d3ab3f7';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A3203129653665185285
+      X-Request-Id:
+      - 74d55c2e-b94f-469c-8e5f-076f7d93add7
+      X-Runtime:
+      - '0.008803'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 34.212.116.232:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:42 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770060-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772703.822931,VS0,VE99
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:42 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-files-generator/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-bfcffd015c3aaa20ba17d03febab54dc';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A2683618705899271934
+      X-Request-Id:
+      - ac4e33a6-834d-434f-a09f-d466be33be58
+      X-Runtime:
+      - '0.008495'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 52.38.203.82:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:43 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770054-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772703.966237,VS0,VE98
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:42 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-type-generator/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-c9cb69f094ec2c8e00b5bc0ea77c6e05';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A4270166676683380046
+      X-Request-Id:
+      - f5bb0dd0-98e5-4a48-a235-5dc3bf8ed56c
+      X-Runtime:
+      - '0.011194'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 52.38.203.82:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:43 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770074-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772703.109561,VS0,VE104
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:42 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-rubocop-rules/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-a832385657d3967a46a3d4566cb2de92';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A2522285367363194629
+      X-Request-Id:
+      - cbcb5160-497f-4f19-b1a3-1a8ecb133d5f
+      X-Runtime:
+      - '0.010058'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 34.212.116.232:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:43 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770021-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772703.342472,VS0,VE101
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:43 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-command-generator/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-2c4f108410ad1bbfc1ea5163a1cbcc0f';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A3747692194121839098
+      X-Request-Id:
+      - e4004dbd-d17b-435f-be8b-93668b4b0dbe
+      X-Runtime:
+      - '0.006575'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 52.38.203.82:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:43 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770071-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772704.548703,VS0,VE79
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:43 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-domain-generator/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-85d8574f3d96b10300fd6c91b73c78e5';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A2228850239932254303
+      X-Request-Id:
+      - cb73237d-d3a5-40df-9520-9c0bea055bb4
+      X-Runtime:
+      - '0.006657'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 34.212.116.232:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:43 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770037-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772704.664367,VS0,VE96
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:43 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-rack-connector/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-869698da6f79285ededd4d0e23fb7423';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A2157390933600402077
+      X-Request-Id:
+      - 10eac375-348d-46ab-9fd4-fde4ccc0df03
+      X-Runtime:
+      - '0.007661'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 34.212.116.232:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:43 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770023-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772704.808304,VS0,VE99
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:43 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-autocrud-generator/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-ebb26262f5e06d91e947d258524698ca';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A2722840177487086082
+      X-Request-Id:
+      - d6c90812-3ea8-4437-a526-a5b461c538dc
+      X-Runtime:
+      - '0.007262'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 34.212.116.232:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:44 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770057-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772704.960168,VS0,VE97
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:43 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-organization-generator/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-24a3cbc650eea4f15f4ff60cd151cb3e';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A461462846408755203
+      X-Request-Id:
+      - 4ce0a521-50a1-4530-a39d-5bdfdad8935d
+      X-Runtime:
+      - '0.006614'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 35.163.143.14:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:44 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770039-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772704.103090,VS0,VE31
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:43 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-rack-connector-generator/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-00d0998950277318b3ea633348dd5100';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A4396515178259609191
+      X-Request-Id:
+      - 22636bc5-8b05-464a-ac66-49ff0dd37dc8
+      X-Runtime:
+      - '0.009401'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 34.212.116.232:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:44 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770041-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772704.166422,VS0,VE100
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:43 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-spec-helpers/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-1905d3e095506dd5ace3148d9f98af3e';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A4304396675516614233
+      X-Request-Id:
+      - 6494de0f-4313-4ab8-b439-6896a3bc6cf9
+      X-Runtime:
+      - '0.008938'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 34.212.116.232:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:44 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770060-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772704.312326,VS0,VE34
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:43 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-sh-cli-connector/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-0987f7e75d984eb5b4d60fecf85c5f8a';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A1212995637435551364
+      X-Request-Id:
+      - '03291b0f-a648-477b-b8f0-b145fd50bcc8'
+      X-Runtime:
+      - '0.008785'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 34.212.116.232:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:44 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770042-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772704.390291,VS0,VE33
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:43 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-domain-mapper-generator/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-9f664abc8a3dcab3e4785600b2a7945e';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A1999432776882882859
+      X-Request-Id:
+      - 6da5728a-d326-4499-b20b-46e359bea8ad
+      X-Runtime:
+      - '0.006545'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 52.38.203.82:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:44 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770051-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772704.469440,VS0,VE98
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:44 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-remote-imports-generator/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-4424182904b3dce24d83f27e846729ed';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A807503619460235956
+      X-Request-Id:
+      - 00a45a77-2a9b-46d4-a84d-77c2ecfc867c
+      X-Runtime:
+      - '0.007962'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 35.163.143.14:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:44 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770075-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772705.609636,VS0,VE99
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:44 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-empty-ruby-project-generator/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-671e1f77d7f7bd6d786566021f9721a5';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A580503029446468916
+      X-Request-Id:
+      - 66f7a0c1-275f-412a-8fa1-9a870f7be88b
+      X-Runtime:
+      - '0.008291'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 34.212.116.232:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:44 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770066-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772705.776709,VS0,VE34
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:44 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-dotenv-loader/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-c9db69a419936f81c3609e1de8fac530';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A3067400443840805245
+      X-Request-Id:
+      - 57ee85a3-d01d-4016-9aac-eb10c3fce307
+      X-Runtime:
+      - '0.006297'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 52.38.203.82:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:44 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770060-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772705.859191,VS0,VE31
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:44 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-resque-connector-generator/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-42e2a570056b78f8c4f6504fe83d7335';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A4027500141242884559
+      X-Request-Id:
+      - 8f7ac3bd-d069-4dfc-b217-9f910d02807e
+      X-Runtime:
+      - '0.007345'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 52.38.203.82:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:45 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770058-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772705.938847,VS0,VE77
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:44 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-typescript-remote-command-generator/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-b5dacd9a197dd5f3ccb10ab5b04a44ff';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A921148006395105159
+      X-Request-Id:
+      - 2fa980bd-9fdc-46c6-b441-9863065f58a1
+      X-Runtime:
+      - '0.011540'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 35.163.143.14:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:45 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770072-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772705.065881,VS0,VE35
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:44 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-anthropic-api/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-599a2f7135208f8eeb7e9eb5e950a8aa';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A3232386260835669232
+      X-Request-Id:
+      - 9913c0cf-1a12-4cbd-a49e-c398d6a0d9bb
+      X-Runtime:
+      - '0.011770'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 34.212.116.232:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:45 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770050-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772705.140070,VS0,VE36
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:44 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-sh-cli-connector-generator/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-571ee27517b1f3c8e0e9561596124800';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A165005084022872146
+      X-Request-Id:
+      - a1fbb461-f962-4b65-b1dd-3c0adadd1899
+      X-Runtime:
+      - '0.012862'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 52.38.203.82:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:45 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770049-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772705.209527,VS0,VE116
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:44 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-open-ai-api/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-8416719866a98768077831bfbe00fa40';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A815339535885723213
+      X-Request-Id:
+      - 07aa1776-09b6-46a8-a080-65d768137cc6
+      X-Runtime:
+      - '0.007175'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 34.212.116.232:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:45 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770074-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772705.372113,VS0,VE54
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:44 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-redis-crud-driver-generator/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-2a6a9f5c1a8dc2e751bd6215058a26b3';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A3430967872710407929
+      X-Request-Id:
+      - f77b44f8-38d4-4696-b898-10225e062faa
+      X-Runtime:
+      - '0.010056'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 52.38.203.82:443
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Tue, 05 Nov 2024 02:11:45 GMT
+      Via:
+      - 1.1 varnish
+      Age:
+      - '0'
+      X-Served-By:
+      - cache-pao-kpao1770029-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772705.474836,VS0,VE104
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:45 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-http-command-connector/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-6160b0970b7c0d71a87b825e278ea677';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A3884866416685080402
+      X-Request-Id:
+      - 320eb656-4068-46e8-9122-f9b9eec7b016
+      X-Runtime:
+      - '0.007322'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 52.38.203.82:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:45 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770035-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772706.608011,VS0,VE31
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:45 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-empty-typescript-react-project-generator/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-e38748943e83238b7980d0d3da1cf2a6';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A869921272814687160
+      X-Request-Id:
+      - 4d7fb09f-1825-43f1-9941-e9d77435df02
+      X-Runtime:
+      - '0.010225'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 35.163.143.14:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:45 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770066-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772706.674065,VS0,VE124
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:45 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-resque-scheduler-connector-generator/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-96825cf990f8afb8d0e6ff9d0c0da141';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A2229172048865347575
+      X-Request-Id:
+      - 1d963a7c-5afa-43cf-9a1e-0468bc60ed89
+      X-Runtime:
+      - '0.010696'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 35.163.143.14:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:45 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770032-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772706.847258,VS0,VE36
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:45 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobara-typescript-react-command-form-generator/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-1ee34267ebe62ab2f76896b686908f16';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A4577931378476765320
+      X-Request-Id:
+      - ce7bfeff-39c5-4d52-936b-dbf9a8400876
+      X-Runtime:
+      - '0.007467'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 52.38.203.82:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:46 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770082-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772706.944840,VS0,VE97
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:45 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foob/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-4de703a8286a87e735557e934eb580c3';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A129534897460690036
+      X-Request-Id:
+      - 962e58e3-4b34-47ba-8590-b1777e09d6cd
+      X-Runtime:
+      - '0.008319'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 52.38.203.82:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:46 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770047-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772706.092187,VS0,VE101
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":16853,"handle":"azimux"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:45 GMT
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/foobarac5/owners.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - rubygems.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - default-src 'self'; font-src 'self' https://fonts.gstatic.com; img-src 'self'
+        https://secure.gaug.es https://gravatar.com https://www.gravatar.com https://secure.gravatar.com
+        https://*.fastly-insights.com https://avatars.githubusercontent.com; object-src
+        'none'; script-src 'self' 'sha256-vZn6ZdPpqzWiuOUiUAJ4t+uIV6LJAa/djuZon4OeUR4='
+        https://secure.gaug.es https://www.fastly-insights.com 'nonce-c62af48470a716050fd863c174f1a154';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src
+        'self' https://s3-us-west-2.amazonaws.com/rubygems-dumps/ https://*.fastly-insights.com
+        https://fastly-insights.com https://api.github.com http://localhost:*; form-action
+        'self' https://github.com/login/oauth/authorize; frame-ancestors 'self'; base-uri
+        'self'; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub852fa3e2312391fafa5640b60784e660&dd-evp-origin=content-security-policy&ddsource=csp-report&ddtags=service%3Arubygems.org%2Cversion%3Aa42cec739f9a976a6559469fa8227917c426071d%2Cenv%3Aproduction%2Ctrace_id%3A1365632712270285750
+      X-Request-Id:
+      - 6e0de3df-f918-4c79-a6e7-a86a62eedcc8
+      X-Runtime:
+      - '0.009742'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Backend:
+      - F_Rails 52.38.203.82:443
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Date:
+      - Tue, 05 Nov 2024 02:11:46 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pao-kpao1770078-PAO
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1730772706.314211,VS0,VE35
+      Vary:
+      - Accept-Encoding
+      Server:
+      - RubyGems.org
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":24792,"handle":"ihower"}]'
+  recorded_at: Tue, 05 Nov 2024 02:11:45 GMT
 recorded_with: VCR 6.3.1

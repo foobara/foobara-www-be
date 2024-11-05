@@ -15,7 +15,7 @@ RSpec.describe Foobara::RubyDocumentation::LoadFoobaraProjectsFromRubyGemsDotOrg
     Foobara::RubyDocumentation::FoobaraProject.all.each(&:hard_delete!)
   end
 
-  it "is successful", vcr: { record: :none } do
+  it "is successful", :focus, vcr: { record: :new_episodes } do
     expect {
       expect(outcome).to be_success
     }.to change(Foobara::RubyDocumentation::FoobaraProject, :count).from(0)

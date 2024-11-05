@@ -1,11 +1,13 @@
 require_relative "../ruby_gems_api/search"
+require_relative "../ruby_gems_api/get_owners"
 
 module Foobara
   module RubyDocumentation
     class LoadFoobaraProjectsFromRubyGemsDotOrg < Foobara::Command
       result [FoobaraProject]
 
-      depends_on Foobara::RubyGemsApi::Search
+      depends_on Foobara::RubyGemsApi::Search,
+                 Foobara::RubyGemsApi::GetOwners
 
       def execute
         delete_all_projects
@@ -32,17 +34,9 @@ module Foobara
         project_gems.select! do |project_gem|
           project_name = project_gem.name
 
-          cmd = "gem owner #{project_name}"
-          Open3.popen3(cmd) do |_stdin, stdout, stderr, wait_thr|
-            exit_status = wait_thr.value
-            unless exit_status.success?
-              # :nocov:
-              raise "ERROR: could not #{cmd} #{stderr.read}"
-              # :nocov:
-            end
+          owners = run_subcommand!(Foobara::RubyGemsApi::GetOwners, gem_name: project_name)
 
-            stdout.read =~ /^- azimux$/
-          end
+          owners.any? { |owner| owner.handle == "azimux" }
         end
       end
 
