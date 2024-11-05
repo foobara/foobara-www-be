@@ -1,58 +1,37 @@
+require_relative "../ruby_gems_api/search"
+
 module Foobara
   module RubyDocumentation
     class LoadFoobaraProjectsFromRubyGemsDotOrg < Foobara::Command
       result [FoobaraProject]
 
+      depends_on Foobara::RubyGemsApi::Search
+
       def execute
         delete_all_projects
 
-        find_all_project_names
+        find_all_project_gems
         filter_by_owner
         create_foobara_projects
 
         projects
       end
 
-      class << self
-        def find_all_project_names_cmd
-          "gem list --remote '^foobara(\b|-)'"
-        end
-      end
-
-      attr_accessor :projects, :project
+      attr_accessor :projects, :project, :project_gems
 
       def delete_all_projects
         # TODO: why isn't there a delete_all method?
         Foobara::RubyDocumentation::FoobaraProject.all.each(&:hard_delete!)
       end
 
-      def project_names
-        @project_names ||= []
-      end
-
-      def find_all_project_names_cmd
-        self.class.find_all_project_names_cmd
-      end
-
-      def find_all_project_names
-        Open3.popen3(find_all_project_names_cmd) do |_stdin, stdout, stderr, wait_thr|
-          stdout.each_line do |line|
-            if line =~ /^(foobara(?:-[\w-]+)?) \(/
-              project_names << ::Regexp.last_match(1)
-            end
-          end
-
-          exit_status = wait_thr.value
-          unless exit_status.success?
-            # :nocov:
-            raise "ERROR: could not #{cmd} #{stderr.read}"
-            # :nocov:
-          end
-        end
+      def find_all_project_gems
+        self.project_gems = run_subcommand!(Foobara::RubyGemsApi::Search, query: "foobara")
       end
 
       def filter_by_owner
-        project_names.select! do |project_name|
+        project_gems.select! do |project_gem|
+          project_name = project_gem.name
+
           cmd = "gem owner #{project_name}"
           Open3.popen3(cmd) do |_stdin, stdout, stderr, wait_thr|
             exit_status = wait_thr.value
@@ -68,7 +47,9 @@ module Foobara
       end
 
       def create_foobara_projects
-        project_names.each do |project_name|
+        project_gems.each do |project_gem|
+          project_name = project_gem.name
+
           puts "processing #{project_name}"
           cmd = "gem info --remote --all -e #{project_name}"
           Open3.popen3(cmd) do |_stdin, stdout, stderr, wait_thr|
