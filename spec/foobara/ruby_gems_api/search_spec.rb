@@ -9,7 +9,7 @@ RSpec.describe Foobara::RubyGemsApi::Search do
     { query: "foobara" }
   end
 
-  it "is successful", :focus, vcr: { record: :once } do
+  it "is successful", vcr: { record: :none } do
     expect(outcome).to be_success
     expect(result).to be_an(Array)
   end

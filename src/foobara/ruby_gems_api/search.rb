@@ -10,7 +10,7 @@ module Foobara
         query :string, :required
       end
 
-      result ::Array
+      result [Gem]
 
       def execute
         build_request_body
@@ -44,7 +44,6 @@ module Foobara
         json = if response.is_a?(Net::HTTPSuccess)
                  response.body
                else
-                 binding.pry
                  # :nocov:
                  raise "Could not successfully hit #{API_URL}: " \
                        "#{response.code} #{response.message}"
