@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require_relative "../boot"
+
+require "foobara/sh_cli_connector"
+# TODO: this doesn't really belong here
+Foobara::Persistence.default_crud_driver = Foobara::Persistence::CrudDrivers::InMemory.new
+
+command_connector = Foobara::CommandConnectors::ShCliConnector.new
+
+command_connector.connect(Foobara::RubyDocumentation::GenerateLatestForEachGem)
+
+command_connector.run(ARGV)
