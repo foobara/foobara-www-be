@@ -14,11 +14,6 @@ RSpec.describe Foobara::RubyDocumentation::GenerateLatestForEachGem do
   end
 
   before do
-    Bundler.with_unbundled_env do
-      # NOTE: trying to create a situation where there's multiple installed versions of a gem to test certain code paths
-      system("gem install foobara-util -v 0.0.5")
-    end
-
     FileUtils.rm_rf(output_dir)
 
     allow(command).to receive(:run_subcommand!).with(
@@ -28,7 +23,7 @@ RSpec.describe Foobara::RubyDocumentation::GenerateLatestForEachGem do
                      gem_name: "foobara-util",
                      homepage: "Homepage One",
                      description: "some gem",
-                     versions: ["0.0.6"]
+                     versions: ["0.0.6", "0.0.5"]
                    ),
                    Foobara::RubyDocumentation::FoobaraProject.build(
                      gem_name: "foob",
