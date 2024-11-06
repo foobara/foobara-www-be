@@ -5,7 +5,7 @@ module Foobara
   module RubyDocumentation
     class GenerateLatestForEachGem < Foobara::Command
       inputs do
-        output_dir :string, default: "~/tmp/foobara_docs"
+        output_dir :string, default: "#{Dir.home}/tmp/foobara_docs"
       end
 
       result ::Hash
@@ -31,6 +31,10 @@ module Foobara
       def load_projects
         puts "loading projects..."
         self.projects = run_subcommand!(LoadFoobaraProjectsFromRubyGemsDotOrg)
+      end
+
+      def gem_installed_paths
+        @gem_installed_paths ||= []
       end
 
       def each_project
@@ -115,7 +119,9 @@ module Foobara
       end
 
       def generate_yard_documentation
-        Dir.chdir installed_path do
+        path = installed_path
+        gem_installed_paths << path
+        Dir.chdir path do
           Bundler.with_unbundled_env do
             Open3.popen3("gem install yard") do |_stdin, _stdout, stderr, wait_thr|
               exit_status = wait_thr.value
@@ -128,7 +134,7 @@ module Foobara
 
             gem_name = project.gem_name
             gem_version = project.versions.first
-            gem_output_dir = File.join(output_dir, gem_name, gem_version)
+            gem_output_dir = File.join(output_dir, "gems", gem_name, gem_version)
 
             stats[gem_name] ||= {}
             stat = stats[gem_name][gem_version] ||= {}
@@ -159,6 +165,29 @@ module Foobara
       end
 
       def stitch_into_one_page
+        top_level_dir = File.join(output_dir, "root")
+        FileUtils.mkdir_p top_level_dir
+
+        Dir.chdir top_level_dir do
+          gem_installed_paths.each do |gem_installed_path|
+            unless File.exist?(File.basename(gem_installed_path))
+              FileUtils.ln_s(gem_installed_path, ".")
+            end
+          end
+
+          Bundler.with_unbundled_env do
+            Open3.popen3(
+              "yard doc '*/projects/**/*.rb' '*/src/**/*.rb' '*/lib/**/*.rb' -o '../root_docs'"
+            ) do |_stdin, _stdout, stderr, wait_thr|
+              exit_status = wait_thr.value
+              unless exit_status.success?
+                # :nocov:
+                warn "WARNING: could not run yard doc. #{stderr.read}"
+                # :nocov:
+              end
+            end
+          end
+        end
       end
     end
   end

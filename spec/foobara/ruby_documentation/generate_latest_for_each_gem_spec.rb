@@ -39,7 +39,7 @@ RSpec.describe Foobara::RubyDocumentation::GenerateLatestForEachGem do
                  ])
   end
 
-  it "is successful",  vcr: { record: :none } do
+  it "is successful", vcr: { record: :none } do
     expect(outcome).to be_success
     expect(command).to have_received(:run_subcommand!).with(
       Foobara::RubyDocumentation::LoadFoobaraProjectsFromRubyGemsDotOrg
