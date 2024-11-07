@@ -24,6 +24,7 @@ module Foobara
         end
 
         stitch_into_one_page
+        write_documentation_json
 
         stats
       end
@@ -205,6 +206,16 @@ module Foobara
             end
           end
         end
+      end
+
+      def write_documentation_json
+        data = projects.to_h do |project|
+          [project.gem_name, project.versions]
+        end
+
+        json = JSON.pretty_generate(data)
+
+        File.write(File.join(output_dir, "data.json"), json)
       end
     end
   end
