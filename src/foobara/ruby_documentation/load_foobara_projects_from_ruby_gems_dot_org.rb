@@ -1,7 +1,3 @@
-require_relative "../ruby_gems_api/search"
-require_relative "../ruby_gems_api/get_owners"
-require_relative "../ruby_gems_api/get_versions"
-
 module Foobara
   module RubyDocumentation
     class LoadFoobaraProjectsFromRubyGemsDotOrg < Foobara::Command
