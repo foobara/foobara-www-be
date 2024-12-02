@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/foobara/sh-cli-connector.git
-  revision: 78a25b077e9ad46c56a734bd04bd6450345bcf09
+  revision: 45a030c857aa471ffe0985532b6a89a18c051a7a
   specs:
-    foobara-sh-cli-connector (0.0.6)
+    foobara-sh-cli-connector (0.0.9)
       foobara
 
 PATH
@@ -142,7 +142,7 @@ GEM
       foobara-type-generator
       foobara-typescript-react-command-form-generator
       foobara-typescript-remote-command-generator
-    foobara (0.0.12)
+    foobara (0.0.20)
       foobara-util
     foobara-autocrud-generator (0.0.1)
       foobara
@@ -205,7 +205,7 @@ GEM
     foobara-typescript-remote-command-generator (0.0.6)
       foobara
       foobara-files-generator
-    foobara-util (0.0.6)
+    foobara-util (0.0.7)
     formatador (1.1.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
