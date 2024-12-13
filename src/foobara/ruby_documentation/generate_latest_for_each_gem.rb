@@ -18,8 +18,12 @@ module Foobara
 
         each_project do
           each_version do
-            install_gem
-            generate_yard_documentation
+            if latest_version?
+              install_gem
+              generate_yard_documentation
+            else
+              delete_yard_documentation
+            end
           end
         end
 
@@ -51,6 +55,10 @@ module Foobara
         end
       end
 
+      def latest_version?
+        version == project.latest_version
+      end
+
       def each_version
         project.versions.each do |version|
           self.version = version
@@ -76,57 +84,71 @@ module Foobara
       end
 
       def installed_path
+        gem_name = project.gem_name
+
+        info_text = read_gem_info
+
+        if info_text =~ /\A#{gem_name} \(([^)]+\))$/
+          installed_versions = ::Regexp.last_match(1)
+
+          has_multiple_versions = installed_versions.include?(",")
+
+          regex = if has_multiple_versions
+                    /\n\s*Installed at:? (\(.*)\n\n/m
+                  else
+                    /^\s*Installed at: ([^\n]+)$/
+                  end
+
+          if info_text =~ regex
+            installed_at_location = if has_multiple_versions
+                                      installed_at_locations = ::Regexp.last_match(1)
+
+                                      if installed_at_locations =~ /^\s*\(#{version}\): (.*)$/
+                                        ::Regexp.last_match(1)
+                                      else
+                                        # :nocov:
+                                        raise "could not find installed path for #{project.gem_name}"
+                                        # :nocov:
+                                      end
+                                    else
+                                      ::Regexp.last_match(1)
+                                    end
+
+            File.join(installed_at_location, "gems", "#{gem_name}-#{version}")
+          else
+            # :nocov:
+            raise "could not find installed path for #{project.gem_name}"
+            # :nocov:
+          end
+        else
+          # :nocov:
+          raise "Could not find installed version for #{project.gem_name}"
+          # :nocov:
+        end
+      end
+
+      def read_gem_info
         Bundler.with_unbundled_env do
           gem_name = project.gem_name
+          cmd = "gem info --quiet #{gem_name}"
 
-          Open3.popen3("gem info #{gem_name}") do |_stdin, stdout, stderr, wait_thr|
+          Open3.popen3(cmd) do |_stdin, stdout, stderr, wait_thr|
             exit_status = wait_thr.value
             unless exit_status.success?
               # :nocov:
-              warn "WARNING: could not rubocop -A. #{stderr.read}"
+              warn "WARNING: could not #{cmd}. #{stderr.read}"
               # :nocov:
             end
 
-            info_text = stdout.read
-
-            if info_text =~ /\A#{gem_name} \(([^)]+\))$/
-              installed_versions = ::Regexp.last_match(1)
-
-              has_multiple_versions = installed_versions.include?(",")
-
-              regex = if has_multiple_versions
-                        /\n\s+Installed at (\(.*)\n\n/m
-                      else
-                        /^\s+Installed at: ([^\n]+)$/
-                      end
-
-              if info_text =~ regex
-                installed_at_location = if has_multiple_versions
-                                          installed_at_locations = ::Regexp.last_match(1)
-
-                                          if installed_at_locations =~ /^\s*\(#{version}\): (.*)$/
-                                            ::Regexp.last_match(1)
-                                          else
-                                            # :nocov:
-                                            raise "could not find installed path for #{project.gem_name}"
-                                            # :nocov:
-                                          end
-                                        else
-                                          ::Regexp.last_match(1)
-                                        end
-
-                File.join(installed_at_location, "gems", "#{gem_name}-#{version}")
-              else
-                # :nocov:
-                raise "could not find installed path for #{project.gem_name}"
-                # :nocov:
-              end
-            else
-              # :nocov:
-              raise "Could not find installed version for #{project.gem_name}"
-              # :nocov:
-            end
+            stdout.read
           end
+        end
+      end
+
+      def delete_yard_documentation
+        if Dir.exist?(docs_output_dir)
+          puts "deleting old docs for #{project.gem_name} #{version}"
+          FileUtils.rm_rf docs_output_dir
         end
       end
 
@@ -150,22 +172,21 @@ module Foobara
             end
 
             gem_name = project.gem_name
-            gem_output_dir = File.join(output_dir, "gems", gem_name, version)
 
             stats[gem_name] ||= {}
             stat = stats[gem_name][version] ||= {}
 
-            if Dir.exist?(gem_output_dir)
+            if Dir.exist?(docs_output_dir)
               stat["status"] = "documentation already existed"
               next
             end
 
-            FileUtils.mkdir_p gem_output_dir
+            FileUtils.mkdir_p docs_output_dir
 
             puts "generating docs for #{gem_name} #{version}"
 
             Open3.popen3(
-              "yard doc 'projects/**/*.rb' 'src/**/*.rb' 'lib/**/*.rb' -o #{gem_output_dir}"
+              "yard doc 'projects/**/*.rb' 'src/**/*.rb' 'lib/**/*.rb' -o #{docs_output_dir}"
             ) do |_stdin, _stdout, stderr, wait_thr|
               exit_status = wait_thr.value
               unless exit_status.success?
@@ -178,6 +199,11 @@ module Foobara
             stat["status"] = "generated docs"
           end
         end
+      end
+
+      def docs_output_dir
+        gem_name = project.gem_name
+        File.join(output_dir, "gems", gem_name, version)
       end
 
       def stitch_into_one_page

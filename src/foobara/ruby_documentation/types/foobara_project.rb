@@ -9,6 +9,10 @@ module Foobara
       end
 
       primary_key :gem_name
+
+      def latest_version
+        versions.first
+      end
     end
   end
 end
