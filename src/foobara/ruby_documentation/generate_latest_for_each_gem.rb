@@ -236,7 +236,9 @@ module Foobara
 
       def write_documentation_json
         data = projects.to_h do |project|
-          [project.gem_name, project.versions]
+          # For now, we just take the latest version to save space and because there's no reason to be interested
+          # in docs for old versions yet
+          [project.gem_name, [project.latest_version]]
         end
 
         json = JSON.pretty_generate(data)
