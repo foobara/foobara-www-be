@@ -25,15 +25,21 @@ RSpec.describe Foobara::RubyDocumentation::GenerateLatestForEachGem do
     ).and_return([
                    Foobara::RubyDocumentation::FoobaraProject.build(
                      gem_name: "foobara-util",
-                     homepage: "Homepage One",
+                     homepage: "example.com",
                      description: "some gem",
                      versions: ["0.0.6", "0.0.5"]
                    ),
                    Foobara::RubyDocumentation::FoobaraProject.build(
                      gem_name: "foob",
-                     homepage: "Homepage One",
+                     homepage: "example.com",
                      description: "some gem",
                      versions: ["0.0.7"]
+                   ),
+                   Foobara::RubyDocumentation::FoobaraProject.build(
+                     gem_name: "foobara",
+                     homepage: "example.com",
+                     description: "some gem",
+                     versions: ["0.0.38"]
                    )
                  ])
   end
@@ -55,6 +61,12 @@ RSpec.describe Foobara::RubyDocumentation::GenerateLatestForEachGem do
                      homepage: "Homepage One",
                      description: "some gem",
                      versions: ["0.0.6"]
+                   ),
+                   Foobara::RubyDocumentation::FoobaraProject.build(
+                     gem_name: "foobara",
+                     homepage: "example.com",
+                     description: "some gem",
+                     versions: ["0.0.38"]
                    )
                  ])
     outcome2 = command2.run

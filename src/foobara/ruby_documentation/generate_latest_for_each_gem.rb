@@ -27,7 +27,7 @@ module Foobara
           end
         end
 
-        stitch_into_one_page
+        stitch_into_all_docs_together_version
         write_documentation_json
 
         stats
@@ -206,7 +206,7 @@ module Foobara
         File.join(output_dir, "gems", gem_name, version)
       end
 
-      def stitch_into_one_page
+      def stitch_into_all_docs_together_version
         top_level_dir = File.join(output_dir, "root")
         FileUtils.rm_r top_level_dir if File.exist?(top_level_dir)
         FileUtils.mkdir_p top_level_dir
@@ -218,6 +218,9 @@ module Foobara
               FileUtils.ln_s(gem_installed_path, ".")
             end
           end
+
+          readme = File.join(installed_foobara_path, "README.md")
+          FileUtils.ln_s(readme, ".")
 
           Bundler.with_unbundled_env do
             Open3.popen3(
@@ -232,6 +235,10 @@ module Foobara
             end
           end
         end
+      end
+
+      def installed_foobara_path
+        gem_installed_paths.find { |path| File.basename(path) =~ /foobara-\d+\.\d+\.\d+$/ }
       end
 
       def write_documentation_json
