@@ -158,7 +158,7 @@ GEM
     foobara-domain-mapper-generator (0.0.3)
       foobara
       foobara-files-generator
-    foobara-dotenv-loader (0.0.1)
+    foobara-dotenv-loader (0.0.2)
       dotenv
     foobara-empty-ruby-project-generator (0.0.12)
       extract-repo
