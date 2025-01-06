@@ -198,7 +198,7 @@ GEM
     foobara-sh-cli-connector-generator (0.0.2)
       foobara
       foobara-files-generator
-    foobara-spec-helpers (0.0.3)
+    foobara-spec-helpers (0.0.4)
       foobara-util
     foobara-type-generator (0.0.3)
       foobara
