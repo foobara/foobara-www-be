@@ -190,7 +190,7 @@ GEM
     foobara-resque-scheduler-connector-generator (0.0.1)
       foobara
       foobara-files-generator
-    foobara-rubocop-rules (0.0.5)
+    foobara-rubocop-rules (0.0.6)
       rubocop
       rubocop-rspec
     foobara-ruby-gems-api (0.0.1)
