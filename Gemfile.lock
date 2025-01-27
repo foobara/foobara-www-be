@@ -143,7 +143,7 @@ GEM
       foobara-type-generator
       foobara-typescript-react-command-form-generator
       foobara-typescript-remote-command-generator
-    foobara (0.0.43)
+    foobara (0.0.51)
       bigdecimal
       foobara-util
     foobara-autocrud-generator (0.0.1)
@@ -210,7 +210,7 @@ GEM
     foobara-typescript-remote-command-generator (0.0.6)
       foobara
       foobara-files-generator
-    foobara-util (0.0.8)
+    foobara-util (0.0.9)
     formatador (1.1.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
