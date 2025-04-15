@@ -6,8 +6,8 @@ require "foobara/sh_cli_connector"
 # TODO: this doesn't really belong here
 Foobara::Persistence.default_crud_driver = Foobara::Persistence::CrudDrivers::InMemory.new
 
-command_connector = Foobara::CommandConnectors::ShCliConnector.new
+command_connector = Foobara::CommandConnectors::ShCliConnector.new(
+  single_command_mode: Foobara::RubyDocumentation::GenerateLatestForEachGem
+)
 
-command_connector.connect(Foobara::RubyDocumentation::GenerateLatestForEachGem)
-
-command_connector.run(ARGV)
+command_connector.run

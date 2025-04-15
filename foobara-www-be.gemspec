@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.metadata["source_code_uri"] = spec.homepage
   spec.metadata["changelog_uri"] = "#{spec.homepage}/blob/main/CHANGELOG.md"
 
-  spec.executables += ["foob-docs"]
+  spec.executables += ["generate-latest-foob-docs-for-each-gem"]
 
   spec.files = Dir[
     "lib/**/*",

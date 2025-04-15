@@ -4,6 +4,9 @@ Backend for foobara.com as well as tools for generating docs.foobara.com fronten
 
 ## Generating documentation
 
+You'll have to have the docs project cloned to the same directory that this project is cloned to
+or you'll have to change the output-dir path in the command below.  To regenerate docs:
+
 ```bash
-foob-docs GenerateLatestForEachGem --output-dir /home/miles/gitlocal/foobara/docs/
+generate-latest-foob-docs-for-each-gem --output-dir ../docs/
 ```
