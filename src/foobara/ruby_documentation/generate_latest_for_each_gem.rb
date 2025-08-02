@@ -14,6 +14,7 @@ module Foobara
       depends_on_entity Foobara::RubyDocumentation::FoobaraProject
 
       def execute
+        expand_output_dir
         load_projects
 
         each_project do
@@ -33,7 +34,11 @@ module Foobara
         stats
       end
 
-      attr_accessor :projects, :project, :version
+      attr_accessor :projects, :project, :version, :expanded_output_dir
+
+      def expand_output_dir
+        self.expanded_output_dir = File.expand_path(output_dir)
+      end
 
       def load_projects
         puts "loading projects..."
@@ -162,11 +167,12 @@ module Foobara
 
         Dir.chdir path do
           Bundler.with_unbundled_env do
-            Open3.popen3("gem install yard") do |_stdin, _stdout, stderr, wait_thr|
+            cmd = "gem install yard"
+            Open3.popen3(cmd) do |_stdin, _stdout, stderr, wait_thr|
               exit_status = wait_thr.value
               unless exit_status.success?
                 # :nocov:
-                warn "WARNING: could not rubocop -A. #{stderr.read}"
+                warn "WARNING: could not #{cmd}: #{stderr.read}"
                 # :nocov:
               end
             end
@@ -185,13 +191,12 @@ module Foobara
 
             puts "generating docs for #{gem_name} #{version}"
 
-            Open3.popen3(
-              "yard doc 'projects/**/*.rb' 'src/**/*.rb' 'lib/**/*.rb' -o #{docs_output_dir}"
-            ) do |_stdin, _stdout, stderr, wait_thr|
+            cmd = "yard doc 'projects/**/*.rb' 'src/**/*.rb' 'lib/**/*.rb' -o #{docs_output_dir}"
+            Open3.popen3(cmd) do |_stdin, _stdout, stderr, wait_thr|
               exit_status = wait_thr.value
               unless exit_status.success?
                 # :nocov:
-                warn "WARNING: could not rubocop -A. #{stderr.read}"
+                warn "WARNING: could not #{cmd}: #{stderr.read}"
                 # :nocov:
               end
             end
@@ -202,15 +207,14 @@ module Foobara
       end
 
       def docs_output_dir
-        gem_name = project.gem_name
-        File.join(output_dir, "gems", gem_name, version)
+        File.join(expanded_output_dir, "gems", project.gem_name, version)
       end
 
       def stitch_into_all_docs_together_version
-        top_level_dir = File.join(output_dir, "root")
+        top_level_dir = File.join(expanded_output_dir, "root")
         FileUtils.rm_r top_level_dir if File.exist?(top_level_dir)
         FileUtils.mkdir_p top_level_dir
-        FileUtils.rm_r File.join(output_dir, "all") if File.exist?(File.join(output_dir, "all"))
+        FileUtils.rm_r File.join(expanded_output_dir, "all") if File.exist?(File.join(expanded_output_dir, "all"))
 
         Dir.chdir top_level_dir do
           gem_latest_installed_paths.each do |gem_installed_path|
@@ -222,14 +226,13 @@ module Foobara
           readme = File.join(installed_foobara_path, "README.md")
           FileUtils.ln_s(readme, ".")
 
+          cmd = "yard doc '*/projects/**/*.rb' '*/src/**/*.rb' '*/lib/**/*.rb' -o '../all'"
           Bundler.with_unbundled_env do
-            Open3.popen3(
-              "yard doc '*/projects/**/*.rb' '*/src/**/*.rb' '*/lib/**/*.rb' -o '../all'"
-            ) do |_stdin, _stdout, stderr, wait_thr|
+            Open3.popen3(cmd) do |_stdin, _stdout, stderr, wait_thr|
               exit_status = wait_thr.value
               unless exit_status.success?
                 # :nocov:
-                warn "WARNING: could not run yard doc. #{stderr.read}"
+                warn "WARNING: could not #{cmd}: #{stderr.read}"
                 # :nocov:
               end
             end
@@ -250,7 +253,7 @@ module Foobara
 
         json = JSON.pretty_generate(data)
 
-        File.write(File.join(output_dir, "data.json"), json)
+        File.write(File.join(expand_output_dir, "data.json"), json)
       end
     end
   end
