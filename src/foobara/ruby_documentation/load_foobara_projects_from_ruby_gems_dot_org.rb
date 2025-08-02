@@ -26,7 +26,8 @@ module Foobara
       end
 
       def find_all_project_gems
-        self.project_gems = run_subcommand!(Foobara::RubyGemsApi::Search, query: "foobara")
+        self.project_gems = run_subcommand!(RubyGemsApi::Search, query: "foobara") +
+                            run_subcommand!(RubyGemsApi::Search, query: "inheritable-thread-vars")
       end
 
       def filter_by_owner

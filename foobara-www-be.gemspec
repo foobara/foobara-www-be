@@ -1,9 +1,5 @@
 require_relative "src/version"
 
-local_ruby_version = File.read("#{__dir__}/.ruby-version").chomp
-local_ruby_version_minor = local_ruby_version[/\A(\d+\.\d+)\.\d+\z/, 1]
-minimum_ruby_version = "#{local_ruby_version_minor}.0"
-
 Gem::Specification.new do |spec|
   spec.name = "foobara-foobara-www-be"
   spec.version = Foobara::FoobaraWwwBe::VERSION
@@ -13,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.summary = "No description. Add one."
   spec.homepage = "https://github.com/foobara/foobara-www-be"
   spec.license = "None specified yet"
-  spec.required_ruby_version = ">= #{minimum_ruby_version}"
+  spec.required_ruby_version = Foobara::FoobaraWwwBe::MINIMUM_RUBY_VERSION
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
@@ -29,8 +25,8 @@ Gem::Specification.new do |spec|
     "CHANGELOG.md"
   ]
 
-  spec.add_dependency "foobara", "~> 0.0.96"
-  spec.add_dependency "foobara-ruby-gems-api", "~> 0.0.1"
+  spec.add_dependency "foobara", "< 2.0.0"
+  spec.add_dependency "foobara-ruby-gems-api", "< 2.0.0"
 
   spec.require_paths = ["lib"]
   spec.metadata["rubygems_mfa_required"] = "true"
