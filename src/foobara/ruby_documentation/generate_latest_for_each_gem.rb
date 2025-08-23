@@ -267,7 +267,7 @@ module Foobara
         data = projects.to_h do |project|
           # For now, we just take the latest version to save space and because there's no reason to be interested
           # in docs for old versions yet
-          [project.gem_name, [project.latest_version]]
+          [project.gem_name, project.latest_build_versions]
         end
 
         json = JSON.pretty_generate(data)
