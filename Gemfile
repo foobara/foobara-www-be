@@ -5,7 +5,9 @@ ruby Foobara::FoobaraWwwBe::MINIMUM_RUBY_VERSION
 
 gemspec
 
+gem "foobara", "< 2.0.0"
 gem "foobara-dotenv-loader", "< 2.0.0"
+gem "foobara-ruby-gems-api", "< 2.0.0" # , path: "../ruby-gems-api"
 gem "foobara-sh-cli-connector", "< 2.0.0"
 
 gem "rake"
