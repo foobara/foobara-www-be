@@ -82,9 +82,9 @@ module Foobara
           Open3.popen3("gem install #{project.gem_name} -v #{version}") do |_stdin, _stdout, stderr, wait_thr|
             exit_status = wait_thr.value
             unless exit_status.success?
-              # :nocov:
+              # simplecov:disable
               warn "WARNING: could not rubocop -A. #{stderr.read}"
-              # :nocov:
+              # simplecov:enable
             end
           end
         end
@@ -113,9 +113,9 @@ module Foobara
                                       if installed_at_locations =~ /^\s*\(#{version}\): (.*)$/
                                         ::Regexp.last_match(1)
                                       else
-                                        # :nocov:
+                                        # simplecov:disable
                                         raise "could not find installed path for #{project.gem_name}"
-                                        # :nocov:
+                                        # simplecov:enable
                                       end
                                     else
                                       ::Regexp.last_match(1)
@@ -123,14 +123,14 @@ module Foobara
 
             File.join(installed_at_location, "gems", "#{gem_name}-#{version}")
           else
-            # :nocov:
+            # simplecov:disable
             raise "could not find installed path for #{project.gem_name}"
-            # :nocov:
+            # simplecov:enable
           end
         else
-          # :nocov:
+          # simplecov:disable
           raise "Could not find installed version for #{project.gem_name}"
-          # :nocov:
+          # simplecov:enable
         end
       end
 
@@ -142,9 +142,9 @@ module Foobara
           Open3.popen3(cmd) do |_stdin, stdout, stderr, wait_thr|
             exit_status = wait_thr.value
             unless exit_status.success?
-              # :nocov:
+              # simplecov:disable
               warn "WARNING: could not #{cmd}. #{stderr.read}"
-              # :nocov:
+              # simplecov:enable
             end
 
             stdout.read
@@ -173,9 +173,9 @@ module Foobara
             Open3.popen3(cmd) do |_stdin, _stdout, stderr, wait_thr|
               exit_status = wait_thr.value
               unless exit_status.success?
-                # :nocov:
+                # simplecov:disable
                 warn "WARNING: could not #{cmd}: #{stderr.read}"
-                # :nocov:
+                # simplecov:enable
               end
             end
 
@@ -197,9 +197,9 @@ module Foobara
             Open3.popen3(cmd) do |_stdin, _stdout, stderr, wait_thr|
               exit_status = wait_thr.value
               unless exit_status.success?
-                # :nocov:
+                # simplecov:disable
                 warn "WARNING: could not #{cmd}: #{stderr.read}"
-                # :nocov:
+                # simplecov:enable
               end
             end
 
@@ -233,9 +233,9 @@ module Foobara
             Open3.popen3(cmd) do |_stdin, _stdout, stderr, wait_thr|
               exit_status = wait_thr.value
               unless exit_status.success?
-                # :nocov:
+                # simplecov:disable
                 warn "WARNING: could not #{cmd}: #{stderr.read}"
-                # :nocov:
+                # simplecov:enable
               end
             end
           end
@@ -255,9 +255,9 @@ module Foobara
             Open3.popen3(cmd) do |_stdin, _stdout, stderr, wait_thr|
               exit_status = wait_thr.value
               unless exit_status.success?
-                # :nocov:
+                # simplecov:disable
                 warn "WARNING: could not #{cmd}: #{stderr.read}"
-                # :nocov:
+                # simplecov:enable
               end
             end
           end
@@ -273,9 +273,9 @@ module Foobara
             Open3.popen3(cmd) do |_stdin, _stdout, stderr, wait_thr|
               exit_status = wait_thr.value
               unless exit_status.success?
-                # :nocov:
+                # simplecov:disable
                 warn "WARNING: could not #{cmd}: #{stderr.read}"
-                # :nocov:
+                # simplecov:enable
               end
             end
           end
